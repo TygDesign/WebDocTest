@@ -1,0 +1,108 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    background: rgb(32, 32, 32);
+    height: 100vh;
+    background: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Quicksand', monospace;
+}
+
+header {
+    padding: 15px;
+    padding-top: 30px;
+    background-color: rgba(29, 29, 29, 0.0);
+    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 10px 20px, rgba(0, 0, 0, 0.10) 0px 6px 6px; */
+}
+
+.menu-ul {
+    position: relative;
+    width: 50%;
+    left: 3.7%;
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    gap: 12%;
+}
+
+a.menu-link {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    text-decoration-color: transparent;
+    color: rgb(212, 212, 212);
+    font-size: 26px;
+    transition: text-decoration-color 0.3s ease-in-out;
+}
+
+a.menu-link:hover {
+    text-decoration-color: rgb(212, 212, 212);
+}
+
+.menu-ul-img {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    width: 55px;
+    cursor: pointer;
+}
+
+.container-first {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+
+h1 {
+    text-transform: uppercase;
+    position: relative;
+    font-size: 110px;
+    color: rgb(212, 212, 212);
+    font-weight: 400;
+}
+
+h1 span {
+    position: relative;
+}
+
+/* .span-paradise {
+    color: rgb(29, 29, 29);
+    background-color: rgb(212, 212, 212);
+} */
+
+.container-btns {
+    position: relative;
+    top: 50%;
+}
+
+.btn-first {
+    font-size: 35px;
+    padding: 20px;
+    width: 300px;
+    color: rgb(212, 212, 212);
+    background: transparent;
+    border: 2px solid rgb(212, 212, 212);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn-first:nth-child(1) {
+    margin-right: 30px;
+}
+
+.btn-first:hover {
+    transition: all 0.3s ease-in-out;
+    background: rgb(212, 212, 212);
+    color: rgb(29, 29, 29);
+}
