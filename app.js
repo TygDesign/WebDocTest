@@ -2,6 +2,7 @@ const titreSpans = document.querySelectorAll('h1 span');
 const btns = document.querySelectorAll('.btn-first');
 const logo = document.querySelector('.menu-ul-img');
 const menuLinks = document.querySelectorAll('.menu-link');
+const menuNav = document.querySelector('.menu-nav');
 
 window.addEventListener ('load', () => {
 
@@ -15,3 +16,27 @@ window.addEventListener ('load', () => {
     
     TL.play();
 })
+
+window.addEventListener('scroll', () => {
+    
+    if(window.scrollY > 1){
+        menuNav.classList.add('menu-nav-scroll');
+    } else {
+        menuNav.classList.remove('menu-nav-scroll');
+    }
+})
+
+// Anim Click
+
+// window.addEventListener('click', (e) => {
+//     console.log(e);
+//     const rond = document.createElement('div');
+//     rond.className = 'clickAnim';
+//     rond.style.top = `${e.pageY - 50}px`;
+//     rond.style.left = `${e.pageX - 50}px`;
+//     document.body.appendChild(rond);
+
+//     setTimeout(() => {
+//         rond.remove();
+//     }, 1500)
+// })

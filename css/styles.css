@@ -2,26 +2,82 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
+element {
+    --main-white : rgb(212, 212, 212);
+    --main-black : rgb(29, 29, 29);
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 body {
-    background: rgb(32, 32, 32);
+    position: relative;
+    font-family: 'Quicksand', monospace;
+}
+
+/* .clickAnim {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    z-index: 9000;
+    transform: scale(0);
+    transform-origin: center;
+    animation: clickAnim 1s ease-in-out;
+}
+
+@keyframes clickAnim {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(2);
+        opacity: 1;
+    }
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+} */
+
+header {
+    position: relative;
     height: 100vh;
     background: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    overflow: hidden;
-    font-family: 'Quicksand', monospace;
+    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 10px 20px, rgba(0, 0, 0, 0.10) 0px 6px 6px; */
 }
 
-header {
-    padding: 15px;
+
+
+.scroll-down {
+    padding-bottom: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+.scroll-down > img, .scroll-up > img {
+    width: 30px;
+    background-size: cover;
+}
+
+.scroll-up {
     padding-top: 30px;
-    background-color: rgba(29, 29, 29, 0.0);
-    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 10px 20px, rgba(0, 0, 0, 0.10) 0px 6px 6px; */
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
 }
 
 .menu-ul {
@@ -35,6 +91,23 @@ header {
     gap: 12%;
 }
 
+.menu-nav {
+    padding: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 101;
+    background-color: transparent;
+    transition: all 0.5s ease-out;
+}
+
+.menu-nav-scroll {
+    background: rgb(29, 29, 29);
+}
+
 a.menu-link {
     position: relative;
     padding-left: 10px;
@@ -42,7 +115,7 @@ a.menu-link {
     display: block;
     text-decoration-color: transparent;
     color: rgb(212, 212, 212);
-    font-size: 26px;
+    font-size: 32px;
     transition: text-decoration-color 0.3s ease-in-out;
 }
 
@@ -53,7 +126,6 @@ a.menu-link:hover {
 .menu-ul-img {
     position: absolute;
     right: 3%;
-    top: 3%;
     width: 55px;
     cursor: pointer;
 }
@@ -105,4 +177,49 @@ h1 span {
     transition: all 0.3s ease-in-out;
     background: rgb(212, 212, 212);
     color: rgb(29, 29, 29);
+}
+
+.container-second {
+    background: rgb(235, 235, 235);
+}
+
+.section1 {
+    position: relative;
+    display: inline-flex;
+    height: 90vh;
+    align-items: center;
+}
+
+.article1 {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    margin: 50px;
+}
+
+.article1-img {
+    width: 49%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.article1-text{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+.article1 h2 {
+    font-size: 75px;
+}
+
+.article1 p {
+    font-size: 35px;
+}
+
+.article1 mark {
+    padding: 5px;
+    background-color: rgb(29, 29, 29);
+    color: white;
 }

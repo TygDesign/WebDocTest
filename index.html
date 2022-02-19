@@ -4,27 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Home</title>
 </head>
 <body>
-    <header>
-        <ul class = "menu-ul">
-            <li class="li1"><a class="menu-link" href="">Home</a></li>
-            <li class="li2"><a class="menu-link" href="">Discover</a></li>
-            <li class="li3"><a class="menu-link" href="">More</a></li>
-            <li class="li4"><a class="menu-link" href="">About</a></li>
-        </ul>
-        <img class="menu-ul-img" src="/img/logo.png" alt="Logo du site">
-    </header>
-    <section class="container-first">
-        <h1><span>visit </span><span>the </span><span>new </span><span class="span-paradise">paradise.</span></h1>
-        <div class="container-btns">
-            <button class="btn-first b1">Discover</button>
-            <button class="btn-first b2">More</button>
+    <header id="part0">
+        <nav class="menu-nav">
+            <ul class = "menu-ul">
+                <li class="li1"><a class="menu-link" href="./index.html">Home</a></li>
+                <li class="li2"><a class="menu-link" href="./pages/article.html">Discover</a></li>
+                <li class="li3"><a class="menu-link" href="">More</a></li>
+                <li class="li4"><a class="menu-link" href="">About</a></li>
+            </ul>
+            <img class="menu-ul-img" src="./img/logo.png" alt="Logo du site">
+        </nav>
+
+        <div class="container-first">
+            <h1><span>visit </span><span>the </span><span>new </span><span class="span-paradise">paradise.</span></h1>
+            <div class="container-btns">
+                <a href="./pages/article.html"><button class="btn-first b1">Discover</button></a>
+                <a href=""><button class="btn-first b2">More</button></a>
+            </div>
         </div>
-    </section>
-    
+        <a href="#part1" class="scroll-down"><img src="./img/scroll.png" alt="descendre la page"></a>
+    </header>
+    <main>
+        <section id="part1" class="section1">
+            <a href="#part0" class="scroll-up"><img src="./img/scroll-up.png" alt="Monter la page"></a>
+            <div class="container-article1">
+                <article class="article1">
+                    <div class="article1-text">
+                        <h2>A land of <mark>culture</mark></h2> 
+                        <p>Discover another way of thinking, between tradition and renewal, this land is full of riches</p>
+                    </div>
+                    <img src="./img/article1.jpg" alt="" class="article1-img">
+                </article>
+            </div>
+        </section>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="app.js"></script>
