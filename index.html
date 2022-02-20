@@ -8,6 +8,7 @@
     <title>Home</title>
 </head>
 <body>
+    
     <header id="part0">
         <nav class="menu-nav">
             <ul class = "menu-ul">
@@ -31,7 +32,7 @@
     <main>
         <section id="part1" class="section1">
             <a href="#part0" class="scroll-up"><img src="./img/scroll-up.png" alt="Monter la page"></a>
-            <div class="container-article1">
+            <div class="container-article1 reveal">
                 <article class="article1">
                     <div class="article1-text">
                         <h2>A land of <mark>culture</mark></h2> 
@@ -42,7 +43,13 @@
             </div>
         </section>
     </main>
+    <div id="loader-wrapper" class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
 
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="app.js"></script>
 </body>

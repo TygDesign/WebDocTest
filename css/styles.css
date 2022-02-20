@@ -105,7 +105,7 @@ header {
 }
 
 .menu-nav-scroll {
-    background: rgb(29, 29, 29);
+    background: #021234;
 }
 
 a.menu-link {
@@ -184,9 +184,10 @@ h1 span {
 }
 
 .section1 {
+    overflow: hidden;
     position: relative;
     display: inline-flex;
-    height: 90vh;
+    min-height: 90vh;
     align-items: center;
 }
 
@@ -205,6 +206,7 @@ h1 span {
 
 .article1-text{
     margin: auto;
+    margin-left: 75px;
     display: flex;
     flex-direction: column;
     gap: 75px;
@@ -220,6 +222,62 @@ h1 span {
 
 .article1 mark {
     padding: 5px;
-    background-color: rgb(29, 29, 29);
+    background-color: #021234;
     color: white;
 }
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* Chargement début */
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+  }
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  @keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }
